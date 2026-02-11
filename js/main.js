@@ -133,5 +133,16 @@
     });
 
 
+    // Search Form Handling
+    $('.search-form').submit(function (e) {
+        e.preventDefault();
+        var keyword = $(this).find('input').val();
+        if (keyword) {
+            alert('Searching for: ' + keyword);
+            $('#searchModal').modal('hide');
+        }
+    });
+
+
 })(jQuery);
 
