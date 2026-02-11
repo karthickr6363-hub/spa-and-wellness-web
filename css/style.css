@@ -105,7 +105,9 @@
 /*** Topbar End ***/
 
 /*** Navbar Start ***/
-.navbar .navbar-brand h1 {
+.navbar .navbar-brand h1,
+.footer-brand h1,
+.brand-name {
     color: var(--primary) !important;
 }
 
@@ -699,3 +701,113 @@ input[type="date"].bg-transparent::-webkit-calendar-picker-indicator {
 }
 
 /*** copyright end ***/
+
+/*** Dashboard Start ***/
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background: var(--accent);
+    color: white;
+    transition: 0.3s;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 15px 25px;
+    transition: 0.3s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar .nav-link i {
+    width: 25px;
+}
+
+.dashboard-main {
+    flex: 1;
+    margin-left: 280px;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.dashboard-header {
+    background: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 992px) {
+    .dashboard-header {
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        left: -280px;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .dashboard-main {
+        margin-left: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .dashboard-header h4 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .stat-card {
+        padding: 15px;
+    }
+
+    .dashboard-header {
+        padding: 10px 15px;
+    }
+
+    .dashboard-header h4 {
+        font-size: 1rem;
+    }
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/*** Dashboard End ***/
