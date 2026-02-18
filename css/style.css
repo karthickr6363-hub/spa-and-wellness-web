@@ -109,10 +109,13 @@
 .footer-brand h1,
 .brand-name {
     color: var(--primary) !important;
+    font-size: 2rem;
+    /* Reduced from default display-6 size */
 }
 
 .navbar .navbar-nav .nav-link {
-    padding: 10px 15px;
+    padding: 10px 10px;
+    /* Reduced padding to decrease gap between menu items */
     font-size: 16px;
     transition: .5s;
 }
@@ -151,7 +154,8 @@
     color: var(--primary);
 }
 
-.navbar .nav-item:hover .dropdown-menu {
+.navbar .nav-item:hover .dropdown-menu,
+.navbar .nav-item .dropdown-menu.show {
     transform: rotateX(0deg);
     visibility: visible;
     background: var(--secondary) !important;
@@ -799,6 +803,118 @@ input[type="date"].bg-transparent::-webkit-calendar-picker-indicator {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
 }
+
+/*** Dark Mode Start ***/
+/*** Dark Mode Start ***/
+body.dark-mode {
+    --dark-bg: #1C1A1D;
+    --dark-text: #F4EFEA;
+    --dark-card-bg: #2E2E2E;
+
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode .bg-light {
+    background-color: var(--dark-bg) !important;
+}
+
+body.dark-mode .bg-secondary {
+    background-color: var(--dark-card-bg) !important;
+}
+
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: var(--dark-text);
+}
+
+body.dark-mode .navbar-light .navbar-nav .nav-link:hover,
+body.dark-mode .navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+body.dark-mode .navbar-light .navbar-brand {
+    color: var(--dark-text);
+}
+
+body.dark-mode .navbar-light .navbar-toggler {
+    color: var(--dark-text);
+    border-color: var(--dark-text);
+}
+
+body.dark-mode .dropdown-menu {
+    background-color: var(--dark-card-bg) !important;
+}
+
+body.dark-mode .dropdown-item {
+    color: var(--dark-text);
+}
+
+body.dark-mode .dropdown-item:hover,
+body.dark-mode .dropdown-item:focus {
+    background-color: var(--primary);
+    color: var(--dark-bg);
+}
+
+/* Ensure other text is visible */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode .h1,
+body.dark-mode .h2,
+body.dark-mode .h3,
+body.dark-mode .h4,
+body.dark-mode .h5,
+body.dark-mode .h6 {
+    color: var(--dark-text) !important;
+}
+
+body.dark-mode .text-dark {
+    color: var(--dark-text) !important;
+}
+
+body.dark-mode .bg-white {
+    background-color: var(--dark-card-bg) !important;
+}
+
+body.dark-mode .dashboard-header {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode .sidebar {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .stat-card {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode .table {
+    color: var(--dark-text);
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: var(--dark-bg);
+    border-color: #444;
+    color: var(--dark-text);
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode .carousel-item img {
+    filter: brightness(0.5);
+}
+
+/*** Dark Mode End ***/
 
 .stat-icon {
     width: 50px;

@@ -163,5 +163,31 @@
         });
     });
 
+
+    // Dark Mode Toggle
+    $(document).ready(function () {
+        const toggleButton = $('#theme-toggle');
+        const body = $('body');
+        const icon = toggleButton.find('i');
+
+        // Check localStorage or system preference
+        if (localStorage.getItem('theme') === 'dark' ||
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            body.addClass('dark-mode');
+            icon.removeClass('fa-moon').addClass('fa-sun');
+        }
+
+        toggleButton.click(function () {
+            body.toggleClass('dark-mode');
+
+            if (body.hasClass('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                icon.removeClass('fa-moon').addClass('fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                icon.removeClass('fa-sun').addClass('fa-moon');
+            }
+        });
+    });
 })(jQuery);
 
