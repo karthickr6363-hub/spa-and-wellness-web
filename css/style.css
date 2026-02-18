@@ -855,6 +855,17 @@ body.dark-mode .dropdown-item:focus {
     color: var(--dark-bg);
 }
 
+/* Fix for white bar in dropdown */
+body.dark-mode .navbar .nav-item:hover .dropdown-menu,
+body.dark-mode .navbar .nav-item .dropdown-menu.show {
+    background: var(--dark-card-bg) !important;
+}
+
+body.dark-mode .dropdown .dropdown-menu a:hover {
+    background: var(--primary);
+    color: var(--dark-bg);
+}
+
 /* Ensure other text is visible */
 body.dark-mode h1,
 body.dark-mode h2,
