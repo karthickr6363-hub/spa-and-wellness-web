@@ -799,6 +799,19 @@ input[type="date"].bg-transparent::-webkit-calendar-picker-indicator {
     transition: 0.3s;
 }
 
+.btn-social-icon {
+    transition: all 0.3s ease;
+}
+
+.btn-social-icon:hover {
+    background-color: var(--secondary) !important;
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 .stat-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
