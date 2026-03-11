@@ -419,6 +419,18 @@ input[type="date"].bg-transparent::-webkit-calendar-picker-indicator {
     border-radius: 10px;
 }
 
+.appointment .appointment-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.appointment .appointment-form .form-select {
+    color: #fff;
+}
+
+.appointment .appointment-form .form-select option {
+    color: var(--accent);
+}
+
 /*** Appointment End ***/
 
 /*** Counter Start ***/
